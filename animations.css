@@ -1,0 +1,114 @@
+/* ═══════════════════════════════════════════════
+   MVRP EXPORTS – ANIMATIONS & TRANSITIONS
+═══════════════════════════════════════════════ */
+
+/* ── Scroll Reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Staggered children */
+.reveal-stagger .reveal:nth-child(1) { transition-delay: 0ms; }
+.reveal-stagger .reveal:nth-child(2) { transition-delay: 80ms; }
+.reveal-stagger .reveal:nth-child(3) { transition-delay: 160ms; }
+.reveal-stagger .reveal:nth-child(4) { transition-delay: 240ms; }
+.reveal-stagger .reveal:nth-child(5) { transition-delay: 320ms; }
+.reveal-stagger .reveal:nth-child(6) { transition-delay: 400ms; }
+
+/* ── Counter Fade In ── */
+@keyframes counterFade {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Shimmer Effect for Cards ── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.shimmer-load {
+  background: linear-gradient(
+    90deg,
+    var(--bg-card) 25%,
+    rgba(200, 169, 81, 0.08) 50%,
+    var(--bg-card) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* ── Page Load Fade ── */
+@keyframes pageFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+body {
+  animation: pageFade 0.4s ease both;
+}
+
+/* ── Floating WhatsApp ── */
+@keyframes floatBounce {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-7px); }
+}
+
+/* ── Gold Glow Pulse ── */
+@keyframes goldGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(200, 169, 81, 0.3); }
+  50%       { box-shadow: 0 0 20px 8px rgba(200, 169, 81, 0.12); }
+}
+
+/* ── Nav Active Link ── */
+.nav-links a.active {
+  color: var(--gold);
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal,
+  .reveal-left,
+  .reveal-right {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,90 @@
+/* ═══════════════════════════════════════════════
+   MVRP EXPORTS – CSS CUSTOM PROPERTIES (VARIABLES)
+   Design tokens for the entire website
+═══════════════════════════════════════════════ */
+
+:root {
+
+  /* ── Brand Colors ── */
+  --navy:         #0B1F3A;
+  --navy-deep:    #040e1c;
+  --navy-mid:     #112947;
+  --navy-light:   #1a3a5e;
+  --navy-glass:   rgba(11, 31, 58, 0.85);
+
+  --gold:         #C8A951;
+  --gold-light:   #dfc278;
+  --gold-pale:    #f5e9c8;
+  --gold-dim:     rgba(200, 169, 81, 0.15);
+  --gold-border:  rgba(200, 169, 81, 0.25);
+  --gold-glow:    rgba(200, 169, 81, 0.35);
+
+  --white:        #FFFFFF;
+  --off-white:    #F8F5EF;
+  --text-muted:   #8a9ab5;
+  --text-light:   #b8c6d9;
+
+  /* ── Backgrounds ── */
+  --bg-dark:      #040e1c;
+  --bg-main:      #0B1F3A;
+  --bg-alt:       #0a1929;
+  --bg-card:      rgba(255, 255, 255, 0.03);
+  --bg-card-hover: rgba(200, 169, 81, 0.06);
+
+  /* ── Typography ── */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Outfit', system-ui, sans-serif;
+  --font-telugu:  'Noto Sans Telugu', sans-serif;
+
+  /* ── Font Sizes ── */
+  --text-xs:   11px;
+  --text-sm:   13px;
+  --text-base: 15px;
+  --text-md:   17px;
+  --text-lg:   20px;
+  --text-xl:   24px;
+  --text-2xl:  32px;
+  --text-3xl:  42px;
+  --text-4xl:  56px;
+  --text-hero: clamp(36px, 6vw, 74px);
+  --text-h2:   clamp(28px, 4vw, 48px);
+
+  /* ── Spacing ── */
+  --space-xs:  4px;
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+
+  /* ── Border Radius ── */
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm:  0 4px 12px rgba(11, 31, 58, 0.3);
+  --shadow-md:  0 12px 32px rgba(11, 31, 58, 0.4);
+  --shadow-lg:  0 20px 60px rgba(11, 31, 58, 0.5);
+  --shadow-gold: 0 8px 24px rgba(200, 169, 81, 0.3);
+  --shadow-gold-lg: 0 12px 40px rgba(200, 169, 81, 0.45);
+
+  /* ── Transitions ── */
+  --transition-fast:   all 0.15s ease;
+  --transition-base:   all 0.25s ease;
+  --transition-slow:   all 0.4s ease;
+  --transition-spring: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Borders ── */
+  --border-gold:  1px solid var(--gold-border);
+  --border-glass: 1px solid rgba(255, 255, 255, 0.06);
+
+  /* ── Layout ── */
+  --container-max: 1280px;
+  --nav-height:    72px;
+  --section-pad:   96px 5%;
+  --section-pad-sm: 64px 5%;
+}
